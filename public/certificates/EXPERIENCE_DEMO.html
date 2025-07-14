@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Experience Demo - Your Portfolio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fdf9;
+        }
+        h1, h2 { color: #4f9a74; }
+        .demo-container { 
+            background: white; 
+            padding: 2rem; 
+            margin: 2rem 0; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .status-badge { 
+            display: inline-block; 
+            padding: 0.3rem 1rem; 
+            border-radius: 20px; 
+            font-size: 0.85rem; 
+            font-weight: bold; 
+            margin: 0.25rem 0.25rem 0.25rem 0;
+        }
+        .current { background: #f8d7da; color: #721c24; }
+        .ready { background: #d4edda; color: #155724; }
+        .upcoming { background: #fff3cd; color: #856404; }
+        
+        .certificate-preview {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1rem 0;
+            text-align: center;
+            background: #f8f9fa;
+        }
+        
+        .mock-modal {
+            border: 1px solid #4f9a74;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: white;
+            margin: 1rem 0;
+        }
+        
+        .mock-image {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            background: linear-gradient(135deg, #4f9a74, #7cb8a0);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin: 1rem auto;
+        }
+        
+        .fallback-display {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            color: #6c757d;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary { background: #4f9a74; color: white; }
+        .btn-outline { background: transparent; color: #4f9a74; border: 1px solid #4f9a74; }
+        .btn-secondary { background: #6c757d; color: white; }
+        
+        .highlight-box {
+            background: #e8f5e8;
+            border-left: 4px solid #4f9a74;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .step-number {
+            background: #4f9a74;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎓 Your Certificate Experience Demo</h1>
+    
+    <div class="highlight-box">
+        <strong>🎯 Current Status:</strong> Your portfolio certificate system is 95% complete! 
+        PDF downloads work perfectly, and the modal system is ready. 
+        You just need to add certificate images for the complete viewing experience.
+    </div>
+
+    <h2>📊 Feature Status Overview</h2>
+    <div class="demo-container">
+        <p><span class="status-badge ready">✅ WORKING</span> Download PDF certificates</p>
+        <p><span class="status-badge ready">✅ WORKING</span> Modal popup system</p>
+        <p><span class="status-badge ready">✅ WORKING</span> Certificate verification links</p>
+        <p><span class="status-badge ready">✅ WORKING</span> Enhanced fallback display</p>
+        <p><span class="status-badge upcoming">⏳ PENDING</span> Certificate image viewing (needs your images)</p>
+    </div>
+
+    <h2>🔄 Current vs. Future Experience</h2>
+    
+    <div class="comparison">
+        <div class="demo-container">
+            <h3>📱 Current: When You Click "View Certificate"</h3>
+            <div class="fallback-display">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📜</div>
+                <h3>Frontend Development</h3>
+                <p><strong>Issuer:</strong> Great Learning</p>
+                <p><strong>Date:</strong> January 15, 2024</p>
+                <p><strong>Duration:</strong> 40 hours</p>
+                <p><strong>Grade:</strong> 95%</p>
+                <div style="margin-top: 1rem; color: #4f9a74;">
+                    <p>📸 Certificate image will be displayed here</p>
+                    <small>Add your certificate image to view it properly</small>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn btn-primary">📥 Download PDF</button>
+                <button class="btn btn-outline">✅ Verify Credential</button>
+            </div>
+        </div>
+
+        <div class="demo-container">
+            <h3>🎯 Future: After Adding Images</h3>
+            <div class="mock-image">
+                🏆 Your Actual Certificate Image
+                <br>
+                <small>(High-resolution, crisp and professional)</small>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <h4>Frontend Development</h4>
+                <p><strong>Great Learning</strong> • January 15, 2024</p>
+                <p>Duration: 40 hours • Grade: 95%</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn btn-primary">📥 Download PDF</button>
+                <button class="btn btn-outline">✅ Verify Credential</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>🚀 How Your Certificates Will Work</h2>
+    
+    <div class="demo-container">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+            <span class="step-number">1</span>
+            <div>
+                <h3>User Clicks "View Certificate"</h3>
+                <p>Beautiful modal opens with smooth animation</p>
+            </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+            <span class="step-number">2</span>
+            <div>
+                <h3>Certificate Image Displays</h3>
+                <p>High-resolution image of your actual certificate appears</p>
+            </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+            <span class="step-number">3</span>
+            <div>
+                <h3>Certificate Details Shown</h3>
+                <p>Complete information: issuer, date, grade, skills, etc.</p>
+            </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+            <span class="step-number">4</span>
+            <div>
+                <h3>Action Buttons Available</h3>
+                <p>Download PDF, verify credential, or close modal</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>📁 Your Certificate Files</h2>
+    
+    <div class="demo-container">
+        <h3>✅ Already Ready (PDFs for Download):</h3>
+        <ul>
+            <li>📄 Frontend-Development.pdf</li>
+            <li>📄 HTML-CSS-JS.pdf</li>
+            <li>📄 NodeJS.pdf</li>
+            <li>📄 PHP-MOOCS.pdf</li>
+            <li>📄 Oracle.pdf</li>
+        </ul>
+        
+        <h3>⏳ Need to Add (Images for Viewing):</h3>
+        <ul>
+            <li>🖼️ Frontend-Development.jpg</li>
+            <li>🖼️ HTML-CSS-JS.jpg</li>
+            <li>🖼️ NodeJS.jpg</li>
+            <li>🖼️ PHP-MOOCS.jpg</li>
+            <li>🖼️ Oracle.jpg</li>
+        </ul>
+    </div>
+
+    <h2>🎯 Quick Action Plan</h2>
+    
+    <div class="demo-container">
+        <div class="highlight-box">
+            <h3>Ready to Complete Your Certificate System?</h3>
+            <ol>
+                <li><strong>Open your certificate PDFs</strong> (they're in /public/certificates/pdfs/)</li>
+                <li><strong>Take screenshots or export as images</strong> (JPG format works best)</li>
+                <li><strong>Save with exact filenames</strong> (shown above)</li>
+                <li><strong>Copy to /public/certificates/images/</strong></li>
+                <li><strong>Refresh your portfolio</strong> and test the "View Certificate" buttons!</li>
+            </ol>
+        </div>
+    </div>
+
+    <h2>🎨 Visual Preview</h2>
+    
+    <div class="demo-container">
+        <h3>How the Modal Will Look:</h3>
+        <div class="mock-modal">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #e9ecef;">
+                <h3 style="margin: 0; color: #4f9a74;">Frontend Development</h3>
+                <span style="cursor: pointer; font-size: 1.5rem;">✕</span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <div>
+                    <div class="mock-image">
+                        📜 Your Certificate Image
+                        <br>
+                        <small>Clean, professional, high-resolution</small>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4>Certificate Details</h4>
+                    <p><strong>Issuer:</strong> Great Learning</p>
+                    <p><strong>Date:</strong> January 15, 2024</p>
+                    <p><strong>Duration:</strong> 40 hours</p>
+                    <p><strong>Grade:</strong> 95%</p>
+                    <p><strong>Skills:</strong> React, JavaScript, CSS</p>
+                    
+                    <div class="action-buttons" style="margin-top: 2rem;">
+                        <button class="btn btn-primary">📥 Download PDF</button>
+                        <button class="btn btn-outline">✅ Verify</button>
+                        <button class="btn btn-secondary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h3>🎉 Once You Add the Images:</h3>
+        <p>Your portfolio will have a complete, professional certificate viewing system that impresses employers and showcases your achievements beautifully!</p>
+    </div>
+
+</body>
+</html>

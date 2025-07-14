@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Image Guide - Portfolio Setup</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2 { color: #4f9a74; }
+        .step { 
+            background: #f8fdf9; 
+            padding: 1.5rem; 
+            margin: 1rem 0; 
+            border-radius: 8px; 
+            border-left: 4px solid #4f9a74;
+        }
+        .file-name { 
+            background: #e8f5e8; 
+            padding: 0.2rem 0.5rem; 
+            border-radius: 4px; 
+            font-family: monospace; 
+        }
+        .status { 
+            display: inline-block; 
+            padding: 0.2rem 0.8rem; 
+            border-radius: 20px; 
+            font-size: 0.8rem; 
+            font-weight: bold;
+        }
+        .ready { background: #d4edda; color: #155724; }
+        .needed { background: #f8d7da; color: #721c24; }
+        ul { padding-left: 1.5rem; }
+        .highlight { background: #fff3cd; padding: 1rem; border-radius: 4px; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <h1>📜 Certificate Images Setup Guide</h1>
+    
+    <div class="highlight">
+        <strong>🎯 Goal:</strong> Add certificate images so the "View Certificate" button shows your actual certificates in the modal popup.
+    </div>
+
+    <h2>📁 Current Status</h2>
+    <ul>
+        <li><span class="status ready">✅ READY</span> PDFs for download functionality</li>
+        <li><span class="status needed">⏳ NEEDED</span> Images for viewing functionality</li>
+    </ul>
+
+    <h2>🔧 Required Files</h2>
+    <p>You need to add these 5 image files to <code>/public/certificates/images/</code>:</p>
+    
+    <div class="step">
+        <h3>1. Frontend Development Certificate</h3>
+        <p><strong>File needed:</strong> <span class="file-name">Frontend-Development.jpg</span></p>
+        <p><strong>Source:</strong> Your Great Learning certificate (January 2024)</p>
+    </div>
+
+    <div class="step">
+        <h3>2. HTML, CSS & JavaScript Certificate</h3>
+        <p><strong>File needed:</strong> <span class="file-name">HTML-CSS-JS.jpg</span></p>
+        <p><strong>Source:</strong> Your web development certificate (November 2022)</p>
+    </div>
+
+    <div class="step">
+        <h3>3. Node.js Development Certificate</h3>
+        <p><strong>File needed:</strong> <span class="file-name">NodeJS.jpg</span></p>
+        <p><strong>Source:</strong> Your backend development certificate (April 2023)</p>
+    </div>
+
+    <div class="step">
+        <h3>4. PHP Programming Certificate</h3>
+        <p><strong>File needed:</strong> <span class="file-name">PHP-MOOCS.jpg</span></p>
+        <p><strong>Source:</strong> Your MOOCS platform certificate (October 2023)</p>
+    </div>
+
+    <div class="step">
+        <h3>5. Oracle Database Certificate</h3>
+        <p><strong>File needed:</strong> <span class="file-name">Oracle.jpg</span></p>
+        <p><strong>Source:</strong> Your Oracle corporation certificate (2024)</p>
+    </div>
+
+    <h2>📱 How to Create Certificate Images</h2>
+    
+    <h3>Method 1: Screenshot (Easiest)</h3>
+    <ol>
+        <li>Open your certificate PDF</li>
+        <li>Take a screenshot of the entire certificate</li>
+        <li>Save as JPG with the exact filename above</li>
+        <li>Copy to <code>/public/certificates/images/</code></li>
+    </ol>
+
+    <h3>Method 2: PDF Export</h3>
+    <ol>
+        <li>Open PDF in Preview (Mac) or Adobe Reader</li>
+        <li>Go to File → Export → JPEG</li>
+        <li>Choose high quality settings</li>
+        <li>Rename to exact filename above</li>
+        <li>Copy to <code>/public/certificates/images/</code></li>
+    </ol>
+
+    <h3>Method 3: Online Converter</h3>
+    <ol>
+        <li>Use tools like PDF24, ILovePDF, or SmallPDF</li>
+        <li>Upload your certificate PDF</li>
+        <li>Convert to JPG/PNG</li>
+        <li>Download and rename correctly</li>
+        <li>Copy to <code>/public/certificates/images/</code></li>
+    </ol>
+
+    <h2>✅ After Adding Images</h2>
+    <p>Once you add the certificate images:</p>
+    <ul>
+        <li><strong>View Certificate</strong> button will show your actual certificate</li>
+        <li><strong>Download PDF</strong> button will download the certificate file</li>
+        <li><strong>Verify</strong> button will show credential information</li>
+    </ul>
+
+    <div class="highlight">
+        <strong>💡 Tip:</strong> Make sure image files are high resolution (at least 1200px wide) for best viewing experience on all devices.
+    </div>
+
+    <h2>🚀 Test Your Setup</h2>
+    <ol>
+        <li>Add certificate images to the folder</li>
+        <li>Refresh your portfolio in the browser</li>
+        <li>Go to Certificates section</li>
+        <li>Click "View Certificate" on any certificate</li>
+        <li>Your certificate image should now display!</li>
+    </ol>
+
+</body>
+</html>

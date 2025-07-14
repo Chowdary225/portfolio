@@ -1,0 +1,73 @@
+# Certificate Management Guide
+
+This portfolio supports both certificate images and PDF files for a complete viewing and download experience.
+
+## Directory Structure:
+```
+public/certificates/
+├── images/          # Certificate images for modal viewing
+│   ├── certificate1.jpg
+│   ├── certificate2.png
+│   └── ...
+├── pdfs/           # Certificate PDFs for downloading
+│   ├── certificate1.pdf
+│   ├── certificate2.pdf
+│   └── ...
+└── sample_certificate.txt (this file)
+```
+
+## Adding Your Certificates:
+
+### 1. Prepare Your Files:
+- **Images**: Save certificate images (JPG, PNG) in `/certificates/images/`
+- **PDFs**: Save certificate PDFs in `/certificates/pdfs/`
+- **Naming**: Use consistent naming (e.g., "html_css_js.jpg" and "html_css_js.pdf")
+
+### 2. Update Data File:
+Edit `src/data/personalData.js` and update the certificates array:
+
+```javascript
+{
+  id: 1,
+  title: "HTML, CSS & JavaScript Certification",
+  issuer: "FreeCodeCamp",
+  date: "2024",
+  description: "Complete web development certification...",
+  skills: ["HTML5", "CSS3", "JavaScript"],
+  credentialId: "fcc-12345",
+  certificateImage: "/certificates/images/html_css_js.jpg",  // For viewing
+  certificateFile: "/certificates/pdfs/html_css_js.pdf",    // For download
+  verifyLink: "https://freecodecamp.org/verification/...",
+  logo: "🌐",
+  featured: true,
+  completionDate: "January 15, 2024",
+  validityPeriod: "Lifetime",
+  certificateType: "Completion",
+  duration: "300 hours",
+  grade: "100%",
+  instructorName: "FreeCodeCamp Team"
+}
+```
+
+### 3. Certificate Features:
+- **View Certificate**: Shows the certificate image in a modal
+- **Download PDF**: Downloads the certificate PDF file
+- **Verify Credential**: Links to verification page or shows credential ID
+
+### 4. Supported Formats:
+- **Images**: JPG, PNG, WEBP (for viewing in modal)
+- **PDFs**: PDF files (for downloading)
+
+### 5. Best Practices:
+- Use high-resolution images (at least 1200px wide)
+- Keep PDF file sizes reasonable (under 5MB)
+- Use descriptive filenames
+- Ensure certificate images are clearly readable
+- Test both view and download functionality
+
+## Example Workflow:
+1. Receive certificate from course provider
+2. Save image version to `/certificates/images/`
+3. Save PDF version to `/certificates/pdfs/`
+4. Update `personalData.js` with certificate details
+5. Test view and download functionality

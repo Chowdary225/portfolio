@@ -1,0 +1,10 @@
+# Certificate Image Placeholder
+
+This is a placeholder for the Frontend Development certificate image.
+
+To add the actual certificate image:
+1. Save your certificate image as JPG or PNG format
+2. Replace this file with: Frontend-Development.jpg or Frontend-Development.png
+3. Update the certificateImage path in personalData.js
+
+Image should be high resolution (at least 1200px wide) for best viewing experience.
