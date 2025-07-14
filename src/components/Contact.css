@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   margin-top: 3rem;
+  align-items: stretch;
+  min-height: 450px;
 }
 
 /* Contact Information */
@@ -10,12 +12,20 @@
   color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .contact-intro p {
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .contact-methods {
@@ -40,7 +50,7 @@
 }
 
 .contact-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   width: 50px;
   height: 50px;
   display: flex;
@@ -50,6 +60,8 @@
   color: white;
   border-radius: 50%;
   flex-shrink: 0;
+  overflow: hidden;
+  line-height: 1;
 }
 
 .contact-details h4 {
@@ -69,30 +81,45 @@
 }
 
 /* Social Section */
+.social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
 .social-section h4 {
   color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .social-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .social-link {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.5rem;
   background: var(--bg-primary);
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
   color: var(--text-primary);
   text-decoration: none;
   transition: var(--transition);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  min-width: 180px;
+  min-height: 56px;
 }
 
 .social-link:hover {
@@ -102,7 +129,10 @@
 }
 
 .social-icon {
-  font-size: 1.1rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Availability Status */
@@ -129,7 +159,7 @@
 }
 
 .status-indicator.available {
-  background: var(--primary-color);
+  background: #065f46;
   animation: pulse-green 2s infinite;
 }
 
@@ -148,12 +178,14 @@
 .status-text {
   font-weight: 600;
   font-size: 1rem;
+  color: #065f46;
 }
 
 .availability p {
   margin: 0;
   opacity: 0.9;
   font-size: 0.9rem;
+  color: #065f46;
 }
 
 /* Contact Form */
@@ -320,6 +352,12 @@
   .contact-content {
     grid-template-columns: 1fr;
     gap: 3rem;
+    min-height: unset;
+  }
+  .contact-info.slide-in-left,
+  .contact-form-section.slide-in-right {
+    height: auto;
+    justify-content: flex-start;
   }
   
   .resume-content {

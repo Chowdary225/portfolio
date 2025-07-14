@@ -19,6 +19,82 @@ const Skills = () => {
     return acc;
   }, {});
 
+  // Certification data
+  const certifications = [
+    {
+      id: 1,
+      title: 'Introduction to HTML5',
+      issuer: 'University of Michigan',
+      image: '/images/Introduction to HTML5.jpg',
+      downloadUrl: '/images/Introduction to HTML5.jpg',
+      date: '2023',
+      description: 'Comprehensive introduction to HTML5 fundamentals and best practices'
+    },
+    {
+      id: 2,
+      title: 'Introduction to Front-End Development',
+      issuer: 'Meta',
+      image: '/images/Introduction to Front-End Development.jpg',
+      downloadUrl: '/images/Introduction to Front-End Development.jpg',
+      date: '2023',
+      description: 'Complete introduction to modern front-end development practices'
+    },
+    {
+      id: 3,
+      title: 'HTML, CSS & JavaScript',
+      issuer: 'Johns Hopkins University',
+      image: '/images/HTML,CSS,JS.png',
+      downloadUrl: '/images/HTML,CSS,JS.png',
+      date: '2023',
+      description: 'Full stack web development with HTML, CSS, and JavaScript'
+    },
+    {
+      id: 4,
+      title: 'Server-side JavaScript with Node.js',
+      issuer: 'The University of Edinburgh',
+      image: '/images/Server side JavaScript with Node js.jpg.png',
+      downloadUrl: '/images/Server side JavaScript with Node js.jpg.png',
+      date: '2023',
+      description: 'Backend development using Node.js and server-side JavaScript'
+    },
+    {
+      id: 5,
+      title: 'Building Web Applications in PHP',
+      issuer: 'University of Michigan',
+      image: '/images/PHP moocsBuilding Web Applications in PHP.jpg.png',
+      downloadUrl: '/images/PHP moocsBuilding Web Applications in PHP.jpg.png',
+      date: '2023',
+      description: 'Full-stack web application development using PHP'
+    },
+    {
+      id: 6,
+      title: 'Oracle Database Course',
+      issuer: 'Oracle University',
+      image: '/images/Oracle Database Course Online.jpg',
+      downloadUrl: '/images/Oracle Database Course Online.jpg',
+      date: '2023',
+      description: 'Comprehensive Oracle database management and SQL programming'
+    },
+    {
+      id: 7,
+      title: 'IBM Professional Certificate',
+      issuer: 'IBM',
+      image: '/images/IBM Certificate.jpg',
+      downloadUrl: '/images/IBM Certificate.jpg',
+      date: '2024',
+      description: 'IBM professional certification in technology and development'
+    },
+    {
+      id: 8,
+      title: 'Infosys Springboard',
+      issuer: 'Infosys Limited',
+      image: '/images/infosys Springboard.jpg',
+      downloadUrl: '/images/infosys Springboard.jpg',
+      date: '2024',
+      description: 'Digital learning and skill development program by Infosys'
+    }
+  ];
+
   function getSkillIcon(skillName) {
     const icons = {
       'HTML5': '🌐',
@@ -80,15 +156,6 @@ const Skills = () => {
                         <div className="skill-header">
                           <span className="skill-icon">{skill.icon}</span>
                           <span className="skill-name">{skill.name}</span>
-                          <span className="skill-percentage">{skill.level}%</span>
-                        </div>
-                        <div className="progress-bar">
-                          <div 
-                            className="progress-fill"
-                            style={{
-                              width: isVisible ? `${skill.level}%` : '0%'
-                            }}
-                          ></div>
                         </div>
                       </div>
                     ))}
@@ -106,6 +173,68 @@ const Skills = () => {
                 <div key={index} className="soft-skill-item">
                   <span className="soft-skill-icon">✨</span>
                   <span className="soft-skill-name">{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div className="certifications-section fade-in">
+            <h3 className="skills-category-title text-center">Certifications</h3>
+            <p className="section-subtitle text-center">
+              Professional certifications that validate my skills and expertise
+            </p>
+            <div className="certifications-grid">
+              {certifications.map((cert, index) => (
+                <div key={cert.id} className="certification-card">
+                  <div className="card-inner">
+                    {/* Front of card */}
+                    <div className="card-front">
+                      <div className="cert-icon">🏆</div>
+                      <h4 className="cert-title">{cert.title}</h4>
+                      <p className="cert-issuer">{cert.issuer}</p>
+                      <p className="cert-date">{cert.date}</p>
+                      <div className="cert-description">
+                        <p>{cert.description}</p>
+                      </div>
+                      <div className="cert-actions">
+                        <button 
+                          onClick={() => window.open(cert.image, '_blank')}
+                          className="cert-btn view-btn"
+                        >
+                          👁️ View Certificate
+                        </button>
+                        <a 
+                          href={cert.downloadUrl}
+                          download
+                          className="cert-btn download-btn"
+                        >
+                          ⬇️ Download
+                        </a>
+                      </div>
+                    </div>
+                    
+                    {/* Back of card */}
+                    <div className="card-back">
+                      <div className="cert-preview">
+                        <div className="cert-image-container">
+                          <img 
+                            src={cert.image} 
+                            alt={`${cert.title} Certificate`}
+                            className="cert-image"
+                            onError={(e) => {
+                              e.target.style.display = 'none';
+                              e.target.nextElementSibling.style.display = 'block';
+                            }}
+                          />
+                          <div className="cert-image-placeholder" style={{display: 'none'}}>
+                            <span>📜</span>
+                            <p>Certificate Preview</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

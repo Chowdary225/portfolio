@@ -248,6 +248,26 @@
   100% { transform: translateX(-50%) translateY(16px); opacity: 0; }
 }
 
+/* Add bouncing effect to the photo */
+.bouncing-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
   .hero-content {

@@ -66,28 +66,10 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      name: 'GitHub',
-      icon: '🔗',
-      url: personalInfo.github,
-      color: '#333'
-    },
-    {
       name: 'LinkedIn',
       icon: '💼',
-      url: personalInfo.linkedin,
+      url: 'https://www.linkedin.com/in/alapati-satyanarayana-sunil-b135a7185/',
       color: '#0077b5'
-    },
-    {
-      name: 'Twitter',
-      icon: '🐦',
-      url: personalInfo.twitter,
-      color: '#1da1f2'
-    },
-    {
-      name: 'Discord',
-      icon: '💬',
-      url: '#',
-      color: '#7289da'
     }
   ];
 
@@ -116,7 +98,6 @@ const Contact = () => {
             <div className="contact-methods">
               {contactInfo.map((item, index) => (
                 <div key={index} className="contact-method">
-                  <div className="contact-icon">{item.icon}</div>
                   <div className="contact-details">
                     <h4>{item.label}</h4>
                     <a 

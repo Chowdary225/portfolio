@@ -10,7 +10,6 @@ const Footer = () => {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Certificates', href: '#certificates' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -108,15 +107,12 @@ const Footer = () => {
             <div className="footer-contact">
               <h4>Get In Touch</h4>
               <div className="contact-item">
-                <span className="contact-icon">📧</span>
                 <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📱</span>
                 <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}>{personalInfo.phone}</a>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📍</span>
                 <span>{personalInfo.location}</span>
               </div>
               <div className="availability-status">
