@@ -8,7 +8,7 @@ export const personalInfo = {
   email: "sunilchowdaryalapati1@gmail.com.com", // Update with your email
   phone: "+91 9848429377", // Update with your phone
   linkedin: "https://linkedin.com/in/yourprofile", // Update with your LinkedIn
-  github: "https://github.com/yourusername", // Update with your GitHub
+  github: "https://github.com/Chowdary225", // Updated with your actual GitHub
   twitter: "https://twitter.com/yourusername", // Update with your Twitter (optional)
 };
 
@@ -83,85 +83,71 @@ export const projects = [
     githubLink: "https://github.com/Chowdary225/portfolio",
     liveLink: "https://chowdary-portfolio.netlify.app", // Update with your actual deployment
     featured: true,
-    image: "/api/placeholder/400/250"
+    image: "/images/React-Portfolio-Website.jpg"
   },
   {
     id: 2,
-    title: "E-commerce Shopping Website",
-    description: "A fully responsive e-commerce website with product catalog, shopping cart functionality, user authentication, and order management. Built with modern web technologies.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Local Storage", "Responsive Design"],
-    category: "Web Development",
-    githubLink: "https://github.com/Chowdary225/e-commerce-store",
-    liveLink: "#", // Update when deployed
-    featured: true,
-    image: "/api/placeholder/400/250"
-  },
-  {
-    id: 3,
-    title: "Bookkaro - Online Bookstore",
-    description: "A dynamic bookstore application allowing users to browse, search, and purchase books online. Features include user authentication, shopping cart, and order management system.",
-    techStack: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript"],
+    title: "Bookkaro - Ticket Booking System",
+    description: "A comprehensive online ticket booking portal for train and bus reservations. Features user authentication, payment processing, booking management, and admin dashboard for Maharashtra transportation system.",
+    techStack: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/bookkaro",
-    liveLink: "#",
-    featured: false,
-    image: "/api/placeholder/400/250"
-  },
-  {
-    id: 4,
-    title: "JavaScript Calculator",
-    description: "A feature-rich calculator application built with vanilla JavaScript. Includes basic arithmetic operations, memory functions, and keyboard support with a clean, modern interface.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "DOM Manipulation"],
-    category: "Web Development",
-    githubLink: "https://github.com/Chowdary225/calculator",
-    liveLink: "#", // Update when deployed
-    featured: false,
-    image: "/api/placeholder/400/250"
-  },
-  {
-    id: 5,
-    title: "Weather App",
-    description: "A responsive weather application that fetches real-time weather data using OpenWeatherMap API. Features current weather, 5-day forecast, and location-based weather updates.",
-    techStack: ["JavaScript", "CSS3", "HTML5", "REST API", "Fetch API"],
-    category: "Web Development",
-    githubLink: "https://github.com/Chowdary225/weather-app",
-    liveLink: "#",
-    featured: false,
-    image: "/api/placeholder/400/250"
-  },
-  {
-    id: 6,
-    title: "To-Do List Application",
-    description: "An interactive task management application with add, edit, delete, and mark complete functionality. Data persistence using local storage and drag-and-drop features.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Local Storage", "DOM Events"],
-    category: "Web Development",
-    githubLink: "https://github.com/Chowdary225/todo-app",
-    liveLink: "#",
-    featured: false,
-    image: "/api/placeholder/400/250"
-  },
-  {
-    id: 7,
-    title: "Restaurant Landing Page",
-    description: "A beautiful, responsive landing page for a restaurant featuring modern design, smooth animations, menu showcase, and contact information. Optimized for all devices.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "CSS Grid"],
-    category: "Web Development",
-    githubLink: "https://github.com/Chowdary225/restaurant-website",
-    liveLink: "#",
-    featured: false,
-    image: "/api/placeholder/400/250"
-  },
-  {
-    id: 8,
-    title: "Personal Blog Website",
-    description: "A clean and modern blog website with article listing, individual post pages, categories, and responsive design. Built with semantic HTML and accessible design principles.",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "SEO"],
-    category: "Web Development",
-    githubLink: "https://github.com/Chowdary225/personal-blog",
-    liveLink: "#",
-    featured: false,
+    liveLink: "#", // Add live demo link if deployed
+    featured: true,
     image: "/api/placeholder/400/250"
   }
+  
+  // 🚀 READY TO ADD MORE PROJECTS?
+  // Your portfolio currently displays 2 authentic GitHub projects.
+  // To add more of your actual GitHub repositories:
+  
+  // STEP 1: Visit your GitHub profile: https://github.com/Chowdary225
+  // STEP 2: Choose repositories you want to showcase
+  // STEP 3: For each repository, add it using this template:
+  
+  /*
+  ,{
+    id: 3, // increment the id number
+    title: "Your Actual Project Name",
+    description: "Real description of what your project does, the problem it solves, and key features. Write 2-3 sentences about the project's purpose and functionality.",
+    techStack: ["HTML5", "CSS3", "JavaScript"], // List actual technologies used
+    category: "Web Development", // or "Mobile App", "Desktop App", etc.
+    githubLink: "https://github.com/Chowdary225/your-actual-repo-name",
+    liveLink: "https://your-live-demo.com", // or "#" if no live demo
+    demoVideo: "https://www.youtube.com/watch?v=VIDEO_ID", // YouTube/Vimeo link or "/videos/demo.mp4" for local
+    featured: false, // set to true for featured projects (max 2-3 featured)
+    image: "/images/project-screenshot.jpg" // add actual screenshot to /public/images/
+  }
+  */
+  
+  // 📋 COMMON PROJECT TYPES TO LOOK FOR IN YOUR GITHUB:
+  // ✅ Calculator Applications
+  // ✅ To-Do List / Task Managers
+  // ✅ Weather Apps with API integration
+  // ✅ E-commerce / Shopping websites
+  // ✅ Blog / CMS websites
+  // ✅ Restaurant / Business landing pages
+  // ✅ Quiz / Game applications
+  // ✅ Music / Media players
+  // ✅ Chat / Social applications
+  // ✅ Portfolio / Personal websites
+  // ✅ Form validation projects
+  // ✅ API integration projects
+  
+  // 🎯 QUALITY TIPS:
+  // - Focus on projects that demonstrate your skills
+  // - Include projects with different tech stacks
+  // - Add live demo links if available
+  // - Take screenshots and add them to /public/images/
+  // - Write compelling descriptions that highlight features
+  // - Keep descriptions professional and concise
+  
+  // 🔥 NEXT STEPS:
+  // 1. Browse: https://github.com/Chowdary225?tab=repositories
+  // 2. Select 3-5 best projects to showcase
+  // 3. Copy the template above for each project
+  // 4. Replace placeholder text with real project details
+  // 5. Save this file to see your updates!
 ];
 
 export const certificates = [];
