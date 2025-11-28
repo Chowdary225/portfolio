@@ -148,14 +148,10 @@ const Footer = () => {
         <div className="container">
           <div className="footer-bottom-content">
             <div className="footer-copyright">
-              <p>
-                © {currentYear} {personalInfo.name}. All rights reserved. 
-                Built with ❤️ using React
-              </p>
             </div>
             
             <div className="footer-meta">
-              <span className="footer-version">Portfolio v2.0</span>
+              <span className="footer-version">Portfolio</span>
               <button className="scroll-top-btn" onClick={scrollToTop}>
                 <span>⬆️</span>
                 Back to Top
