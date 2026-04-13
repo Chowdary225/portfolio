@@ -112,6 +112,9 @@ a {
   transition: var(--transition);
   background: var(--primary-color);
   color: white;
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
 }
 
 .btn:hover {
@@ -270,6 +273,10 @@ a {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
   .container {
     padding: 0 1rem;
   }
@@ -282,6 +289,61 @@ a {
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-lg {
+    width: 100%;
   }
 }
 

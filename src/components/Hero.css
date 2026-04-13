@@ -297,6 +297,11 @@
     padding-top: 80px;
   }
   
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
   .hero-buttons {
     flex-direction: column;
     align-items: center;
@@ -310,6 +315,7 @@
   .profile-container {
     width: 200px;
     height: 200px;
+    margin: 0 auto;
   }
   
   .profile-placeholder svg {
@@ -317,18 +323,80 @@
     height: 100px;
   }
   
-  .shape-1, .shape-2, .shape-3 {
-    width: 100px;
-    height: 100px;
+  .shape-1 {
+    display: none;
+  }
+  
+  .shape-2, .shape-3 {
+    width: 80px;
+    height: 80px;
+    opacity: 0.05;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    min-height: 100vh;
+    padding: 0;
+    padding-top: 80px;
+  }
+
+  .hero-content {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
   .hero-stats {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    margin-top: 1.5rem;
   }
-  
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons {
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .profile-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-placeholder svg {
+    width: 80px;
+    height: 80px;
+  }
+
   .scroll-indicator {
     display: none;
   }
