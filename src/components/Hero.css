@@ -315,6 +315,7 @@
   .profile-container {
     width: 200px;
     height: 200px;
+    margin: 0 auto;
   }
   
   .profile-placeholder svg {
@@ -322,9 +323,14 @@
     height: 100px;
   }
   
-  .shape-1, .shape-2, .shape-3 {
-    width: 100px;
-    height: 100px;
+  .shape-1 {
+    display: none;
+  }
+  
+  .shape-2, .shape-3 {
+    width: 80px;
+    height: 80px;
+    opacity: 0.05;
   }
 }
 
