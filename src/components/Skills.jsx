@@ -183,7 +183,7 @@ const Skills = () => {
           </div>
 
           {/* Certifications */}
-          <div className="certifications-section fade-in">
+          <div id="certificates" className="certifications-section fade-in">
             <h3 className="skills-category-title text-center">Certifications</h3>
             <p className="section-subtitle text-center">
               Professional certifications that validate my skills and expertise
