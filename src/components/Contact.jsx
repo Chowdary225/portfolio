@@ -3,6 +3,8 @@ import { personalInfo } from '../data/personalData';
 import './Contact.css';
 
 const Contact = () => {
+  const basePath = import.meta.env.BASE_URL;
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -261,7 +263,7 @@ const Contact = () => {
             </div>
             <div className="resume-actions">
               <a 
-                href="/Resumemain.pdf"
+                href={`${basePath}Resumemain.pdf`}
                 download="Chowdary_Resume.pdf"
                 className="btn btn-primary btn-lg"
               >
@@ -269,7 +271,7 @@ const Contact = () => {
                 Download PDF Resume
               </a>
               <a 
-                href="/Resumemain.pdf"
+                href={`${basePath}Resumemain.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline btn-lg"

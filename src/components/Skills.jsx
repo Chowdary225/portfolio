@@ -5,6 +5,10 @@ import './Skills.css';
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
   const skillsRef = useRef(null);
+  
+  // Get the correct base path for assets
+  const basePath = import.meta.env.BASE_URL;
+  const getImagePath = (imageName) => `${basePath}images/${imageName}`;
 
   // Group skills by category
   const groupedSkills = skills.technical.reduce((acc, skill) => {
@@ -25,8 +29,8 @@ const Skills = () => {
       id: 1,
       title: 'Introduction to HTML5',
       issuer: 'University of Michigan',
-      image: '/images/Introduction to HTML5.jpg',
-      downloadUrl: '/images/Introduction to HTML5.jpg',
+      image: getImagePath('Introduction to HTML5.jpg'),
+      downloadUrl: getImagePath('Introduction to HTML5.jpg'),
       date: '2023',
       description: 'Comprehensive introduction to HTML5 fundamentals and best practices'
     },
@@ -34,8 +38,8 @@ const Skills = () => {
       id: 2,
       title: 'Introduction to Front-End Development',
       issuer: 'Meta',
-      image: '/images/Introduction to Front-End Development.jpg',
-      downloadUrl: '/images/Introduction to Front-End Development.jpg',
+      image: getImagePath('Introduction to Front-End Development.jpg'),
+      downloadUrl: getImagePath('Introduction to Front-End Development.jpg'),
       date: '2023',
       description: 'Complete introduction to modern front-end development practices'
     },
@@ -43,8 +47,8 @@ const Skills = () => {
       id: 3,
       title: 'HTML, CSS & JavaScript',
       issuer: 'Johns Hopkins University',
-      image: '/images/HTML,CSS,JS.png',
-      downloadUrl: '/images/HTML,CSS,JS.png',
+      image: getImagePath('HTML,CSS,JS.png'),
+      downloadUrl: getImagePath('HTML,CSS,JS.png'),
       date: '2023',
       description: 'Full stack web development with HTML, CSS, and JavaScript'
     },
@@ -52,8 +56,8 @@ const Skills = () => {
       id: 4,
       title: 'Server-side JavaScript with Node.js',
       issuer: 'The University of Edinburgh',
-      image: '/images/Server side JavaScript with Node js.jpg.png',
-      downloadUrl: '/images/Server side JavaScript with Node js.jpg.png',
+      image: getImagePath('Server side JavaScript with Node js.jpg.png'),
+      downloadUrl: getImagePath('Server side JavaScript with Node js.jpg.png'),
       date: '2023',
       description: 'Backend development using Node.js and server-side JavaScript'
     },
@@ -61,8 +65,8 @@ const Skills = () => {
       id: 5,
       title: 'Building Web Applications in PHP',
       issuer: 'University of Michigan',
-      image: '/images/PHP moocsBuilding Web Applications in PHP.jpg.png',
-      downloadUrl: '/images/PHP moocsBuilding Web Applications in PHP.jpg.png',
+      image: getImagePath('PHP moocsBuilding Web Applications in PHP.jpg.png'),
+      downloadUrl: getImagePath('PHP moocsBuilding Web Applications in PHP.jpg.png'),
       date: '2023',
       description: 'Full-stack web application development using PHP'
     },
@@ -70,8 +74,8 @@ const Skills = () => {
       id: 6,
       title: 'Oracle Database Course',
       issuer: 'Oracle University',
-      image: '/images/Oracle Database Course Online.jpg',
-      downloadUrl: '/images/Oracle Database Course Online.jpg',
+      image: getImagePath('Oracle Database Course Online.jpg'),
+      downloadUrl: getImagePath('Oracle Database Course Online.jpg'),
       date: '2023',
       description: 'Comprehensive Oracle database management and SQL programming'
     },
@@ -79,8 +83,8 @@ const Skills = () => {
       id: 7,
       title: 'IBM Professional Certificate',
       issuer: 'IBM',
-      image: '/images/IBM Certificate.jpg',
-      downloadUrl: '/images/IBM Certificate.jpg',
+      image: getImagePath('IBM Certificate.jpg'),
+      downloadUrl: getImagePath('IBM Certificate.jpg'),
       date: '2024',
       description: 'IBM professional certification in technology and development'
     },
@@ -88,8 +92,8 @@ const Skills = () => {
       id: 8,
       title: 'Infosys Springboard',
       issuer: 'Infosys Limited',
-      image: '/images/infosys Springboard.jpg',
-      downloadUrl: '/images/infosys Springboard.jpg',
+      image: getImagePath('infosys Springboard.jpg'),
+      downloadUrl: getImagePath('infosys Springboard.jpg'),
       date: '2024',
       description: 'Digital learning and skill development program by Infosys'
     }
