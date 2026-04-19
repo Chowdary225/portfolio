@@ -6,7 +6,6 @@ const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
   const skillsRef = useRef(null);
   
-  // Get the correct base path for assets
   const basePath = import.meta.env.BASE_URL;
   const getImagePath = (imageName) => `${basePath}images/${imageName}`;
 
@@ -23,91 +22,15 @@ const Skills = () => {
     return acc;
   }, {});
 
-  // Certification data
-  const certifications = [
-    {
-      id: 1,
-      title: 'Introduction to HTML5',
-      issuer: 'University of Michigan',
-      image: getImagePath('Introduction to HTML5.jpg'),
-      downloadUrl: getImagePath('Introduction to HTML5.jpg'),
-      date: '2023',
-      description: 'Comprehensive introduction to HTML5 fundamentals and best practices'
-    },
-    {
-      id: 2,
-      title: 'Introduction to Front-End Development',
-      issuer: 'Meta',
-      image: getImagePath('Introduction to Front-End Development.jpg'),
-      downloadUrl: getImagePath('Introduction to Front-End Development.jpg'),
-      date: '2023',
-      description: 'Complete introduction to modern front-end development practices'
-    },
-    {
-      id: 3,
-      title: 'HTML, CSS & JavaScript',
-      issuer: 'Johns Hopkins University',
-      image: getImagePath('HTML,CSS,JS.png'),
-      downloadUrl: getImagePath('HTML,CSS,JS.png'),
-      date: '2023',
-      description: 'Full stack web development with HTML, CSS, and JavaScript'
-    },
-    {
-      id: 4,
-      title: 'Server-side JavaScript with Node.js',
-      issuer: 'The University of Edinburgh',
-      image: getImagePath('Server side JavaScript with Node js.jpg.png'),
-      downloadUrl: getImagePath('Server side JavaScript with Node js.jpg.png'),
-      date: '2023',
-      description: 'Backend development using Node.js and server-side JavaScript'
-    },
-    {
-      id: 5,
-      title: 'Building Web Applications in PHP',
-      issuer: 'University of Michigan',
-      image: getImagePath('PHP moocsBuilding Web Applications in PHP.jpg.png'),
-      downloadUrl: getImagePath('PHP moocsBuilding Web Applications in PHP.jpg.png'),
-      date: '2023',
-      description: 'Full-stack web application development using PHP'
-    },
-    {
-      id: 6,
-      title: 'Oracle Database Course',
-      issuer: 'Oracle University',
-      image: getImagePath('Oracle Database Course Online.jpg'),
-      downloadUrl: getImagePath('Oracle Database Course Online.jpg'),
-      date: '2023',
-      description: 'Comprehensive Oracle database management and SQL programming'
-    },
-    {
-      id: 7,
-      title: 'IBM Professional Certificate',
-      issuer: 'IBM',
-      image: getImagePath('IBM Certificate.jpg'),
-      downloadUrl: getImagePath('IBM Certificate.jpg'),
-      date: '2024',
-      description: 'IBM professional certification in technology and development'
-    },
-    {
-      id: 8,
-      title: 'Infosys Springboard',
-      issuer: 'Infosys Limited',
-      image: getImagePath('infosys Springboard.jpg'),
-      downloadUrl: getImagePath('infosys Springboard.jpg'),
-      date: '2024',
-      description: 'Digital learning and skill development program by Infosys'
-    }
-  ];
-
   function getSkillIcon(skillName) {
     const icons = {
       'HTML5': '🌐',
       'CSS3': '🎨',
       'JavaScript': '⚡',
       'React': '⚛️',
-      'Responsive Design': '�',
-      'Git & GitHub': '�',
-      'VS Code': '�',
+      'Responsive Design': '📱',
+      'Git & GitHub': '🔧',
+      'VS Code': '💻',
       'Figma': '🎯',
       'npm/yarn': '📦',
       'Chrome DevTools': '🔍'
@@ -147,6 +70,7 @@ const Skills = () => {
         </div>
 
         <div className="skills-content">
+          
           {/* Technical Skills */}
           <div className="technical-skills">
             <h3 className="skills-category-title fade-in">Technical Skills</h3>
@@ -177,68 +101,6 @@ const Skills = () => {
                 <div key={index} className="soft-skill-item">
                   <span className="soft-skill-icon">✨</span>
                   <span className="soft-skill-name">{skill}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Certifications */}
-          <div id="certificates" className="certifications-section fade-in">
-            <h3 className="skills-category-title text-center">Certifications</h3>
-            <p className="section-subtitle text-center">
-              Professional certifications that validate my skills and expertise
-            </p>
-            <div className="certifications-grid">
-              {certifications.map((cert, index) => (
-                <div key={cert.id} className="certification-card">
-                  <div className="card-inner">
-                    {/* Front of card */}
-                    <div className="card-front">
-                      <div className="cert-icon">🏆</div>
-                      <h4 className="cert-title">{cert.title}</h4>
-                      <p className="cert-issuer">{cert.issuer}</p>
-                      <p className="cert-date">{cert.date}</p>
-                      <div className="cert-description">
-                        <p>{cert.description}</p>
-                      </div>
-                      <div className="cert-actions">
-                        <button 
-                          onClick={() => window.open(cert.image, '_blank')}
-                          className="cert-btn view-btn"
-                        >
-                          👁️ View Certificate
-                        </button>
-                        <a 
-                          href={cert.downloadUrl}
-                          download
-                          className="cert-btn download-btn"
-                        >
-                          ⬇️ Download
-                        </a>
-                      </div>
-                    </div>
-                    
-                    {/* Back of card */}
-                    <div className="card-back">
-                      <div className="cert-preview">
-                        <div className="cert-image-container">
-                          <img 
-                            src={cert.image} 
-                            alt={`${cert.title} Certificate`}
-                            className="cert-image"
-                            onError={(e) => {
-                              e.target.style.display = 'none';
-                              e.target.nextElementSibling.style.display = 'block';
-                            }}
-                          />
-                          <div className="cert-image-placeholder" style={{display: 'none'}}>
-                            <span>📜</span>
-                            <p>Certificate Preview</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
@@ -279,25 +141,26 @@ const Skills = () => {
               <div className="highlight-card">
                 <div className="highlight-icon">🎨</div>
                 <h4>UI/UX Focused</h4>
-                <p>Strong eye for design and user experience, creating interfaces that are both beautiful and functional</p>
+                <p>Strong eye for design and user experience</p>
               </div>
               <div className="highlight-card">
                 <div className="highlight-icon">📱</div>
                 <h4>Mobile-First</h4>
-                <p>Expertise in responsive design ensuring seamless experiences across all devices and screen sizes</p>
+                <p>Responsive design across all devices</p>
               </div>
               <div className="highlight-card">
                 <div className="highlight-icon">⚡</div>
-                <h4>Performance Minded</h4>
-                <p>Focus on writing efficient, optimized code that delivers fast loading times and smooth interactions</p>
+                <h4>Performance</h4>
+                <p>Optimized and efficient code</p>
               </div>
               <div className="highlight-card">
                 <div className="highlight-icon">🔧</div>
-                <h4>Modern Workflow</h4>
-                <p>Proficient with modern development tools, version control, and collaborative development practices</p>
+                <h4>Workflow</h4>
+                <p>Modern tools and development practices</p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
