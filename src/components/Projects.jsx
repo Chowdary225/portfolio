@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import { projects as projectsData } from '../data/personalData';
+import { projects as projectsData, personalInfo } from '../data/personalData';
 import './Projects.css';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
+  const [brokenImages, setBrokenImages] = useState({});
 
   const projects = projectsData;
+  const basePath = import.meta.env.BASE_URL || '/';
+
+  const getAssetPath = (path) => {
+    if (!path || path === '#' || path.startsWith('http')) return path;
+    return `${basePath}${path.replace(/^\//, '')}`;
+  };
 
   const categories = [
     { key: 'all', label: 'All Projects' },
@@ -13,11 +20,104 @@ const Projects = () => {
     { key: 'design', label: 'UI/UX Design' }
   ];
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === filter);
+  const filteredProjects = filter === 'all'
+    ? projects
+    : projects.filter((project) => project.category === filter);
 
-  const featuredProjects = projects.filter(project => project.featured);
+  const featuredProjects = projects.filter((project) => project.featured);
+
+  const hasLiveLink = (project) =>
+    project.liveLink && project.liveLink !== '#';
+
+  const hasGithubLink = (project) =>
+    project.githubLink && project.githubLink !== '#' && !project.isPrivate;
+
+  const hasDemoVideo = (project) =>
+    Boolean(project.demoVideo) && !project.comingSoon;
+
+  const isExternalVideo = (url) =>
+    typeof url === 'string' &&
+    (url.includes('youtube.com') ||
+      url.includes('youtu.be') ||
+      url.includes('vimeo.com'));
+
+  const markImageBroken = (id) => {
+    setBrokenImages((prev) => ({ ...prev, [id]: true }));
+  };
+
+  const renderProjectMedia = (project, icon = '🖥️') => {
+    const imageSrc = getAssetPath(project.image);
+    const showImage = project.image && !brokenImages[project.id];
+
+    return (
+      <div className="project-image">
+        {showImage ? (
+          <img
+            src={imageSrc}
+            alt={`${project.title} screenshot`}
+            className="project-screenshot"
+            onError={() => markImageBroken(project.id)}
+          />
+        ) : (
+          <div className="project-placeholder">
+            <span>{project.comingSoon ? '⏳' : icon}</span>
+            <p>{project.comingSoon ? 'Media coming soon' : 'Project Screenshot'}</p>
+          </div>
+        )}
+
+        {project.comingSoon && (
+          <span className="project-badge">Coming Soon</span>
+        )}
+        {project.isPrivate && !project.comingSoon && (
+          <span className="project-badge">Private</span>
+        )}
+
+        <div className="project-overlay">
+          <div className="project-links">
+            {hasGithubLink(project) && (
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <span>📂</span> Code
+              </a>
+            )}
+            {hasLiveLink(project) && (
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <span>🚀</span> Live Demo
+              </a>
+            )}
+            {hasDemoVideo(project) && (
+              <a
+                href={
+                  isExternalVideo(project.demoVideo)
+                    ? project.demoVideo
+                    : getAssetPath(project.demoVideo)
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <span>▶️</span> Demo
+              </a>
+            )}
+            {project.comingSoon && (
+              <span className="project-link project-link-disabled">
+                Upload media later
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <section id="projects" className="section">
@@ -35,34 +135,7 @@ const Projects = () => {
           <div className="featured-grid">
             {featuredProjects.map((project) => (
               <div key={project.id} className="featured-project-card slide-in-left">
-                <div className="project-image">
-                  <div className="project-placeholder">
-                    <span>📱</span>
-                    <p>Project Screenshot</p>
-                  </div>
-                  <div className="project-overlay">
-                    <div className="project-links">
-                      <a 
-                        href={project.githubLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <span>🔗</span> Code
-                      </a>
-                      {project.liveLink !== '#' && (
-                        <a 
-                          href={project.liveLink} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="project-link"
-                        >
-                          <span>🚀</span> Live Demo
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                {renderProjectMedia(project, '📱')}
                 <div className="project-content">
                   <h4 className="project-title">{project.title}</h4>
                   <p className="project-description">{project.description}</p>
@@ -80,7 +153,7 @@ const Projects = () => {
         {/* All Projects */}
         <div className="all-projects">
           <h3 className="subsection-title fade-in">All Projects</h3>
-          
+
           {/* Filter Buttons */}
           <div className="project-filters fade-in">
             {categories.map((category) => (
@@ -97,39 +170,12 @@ const Projects = () => {
           {/* Projects Grid */}
           <div className="projects-grid">
             {filteredProjects.map((project, index) => (
-              <div 
-                key={project.id} 
-                className="project-card slide-in-right"
+              <div
+                key={project.id}
+                className={`project-card slide-in-right${project.comingSoon ? ' coming-soon' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="project-image">
-                  <div className="project-placeholder">
-                    <span>🖥️</span>
-                    <p>Project Screenshot</p>
-                  </div>
-                  <div className="project-overlay">
-                    <div className="project-links">
-                      <a 
-                        href={project.githubLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <span>📂</span>
-                      </a>
-                      {project.liveLink !== '#' && (
-                        <a 
-                          href={project.liveLink} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="project-link"
-                        >
-                          <span>🔗</span>
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                {renderProjectMedia(project)}
                 <div className="project-content">
                   <h4 className="project-title">{project.title}</h4>
                   <p className="project-description">{project.description}</p>
@@ -147,14 +193,14 @@ const Projects = () => {
         {/* Call to Action */}
         <div className="projects-cta fade-in">
           <h3>Interested in working together?</h3>
-          <p>I'm always excited to take on new challenges and learn from experienced developers.</p>
+          <p>I&apos;m always excited to take on new challenges and learn from experienced developers.</p>
           <div className="cta-buttons">
             <a href="#contact" className="btn btn-primary">
-              Let's Connect
+              Let&apos;s Connect
             </a>
-            <a 
-              href="https://github.com/yourusername" 
-              target="_blank" 
+            <a
+              href={personalInfo.github}
+              target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline"
             >
