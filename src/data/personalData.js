@@ -79,9 +79,9 @@ export const projects = [
     title: "React Portfolio Website",
     description: "A modern, responsive portfolio website built with React showcasing my skills, projects, and certifications. Features smooth animations, mobile-first design, and interactive components.",
     techStack: ["React", "CSS3", "JavaScript", "HTML5", "Vite"],
-    category: "Web Development",
+    category: "web",
     githubLink: "https://github.com/Chowdary225/portfolio",
-    liveLink: "https://chowdary-portfolio.netlify.app", // Update with your actual deployment
+    liveLink: "https://chowdary-portfolio.netlify.app",
     featured: true,
     image: "/images/React-Portfolio-Website.jpg"
   },
@@ -90,64 +90,89 @@ export const projects = [
     title: "Bookkaro - Ticket Booking System",
     description: "A comprehensive online ticket booking portal for train and bus reservations. Features user authentication, payment processing, booking management, and admin dashboard for Maharashtra transportation system.",
     techStack: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
-    category: "Web Development",
-    githubLink: "https://github.com/Chowdary225/bookkaro",
-    liveLink: "#", // Add live demo link if deployed
+    category: "web",
+    githubLink: "https://github.com/Chowdary225/BookKaro",
+    liveLink: "#",
     featured: true,
     image: "/api/placeholder/400/250"
+  },
+  {
+    id: 3,
+    title: "Web Project Game",
+    description: "An interactive browser-based game with three progressive difficulty levels (Easy, Medium, Hard). Each level features unique gameplay mechanics, custom styling, and responsive design built with vanilla JavaScript.",
+    techStack: ["JavaScript", "HTML5", "CSS3"],
+    category: "web",
+    githubLink: "https://github.com/Chowdary225/Web-Project-Game",
+    liveLink: "#",
+    featured: false,
+    image: "/api/placeholder/400/250"
+  },
+  {
+    id: 4,
+    title: "INT219 - Apple India Clone",
+    description: "A web development project featuring an Apple India product showcase page with product images and promotional content. Includes user authentication flows with login and signup pages demonstrating front-end fundamentals.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    category: "web",
+    githubLink: "https://github.com/Chowdary225/INT219",
+    liveLink: "#",
+    featured: false,
+    image: "/api/placeholder/400/250"
+  },
+  {
+    id: 5,
+    title: "E-Commerce Shoe Store",
+    description: "A responsive e-commerce storefront for footwear featuring a product catalog, featured items carousel, and modern UI design. Showcases front-end skills in building visually appealing online shopping experiences.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    category: "web",
+    githubLink: "https://github.com/Chowdary225/E-commerce-",
+    liveLink: "#",
+    featured: false,
+    image: "/api/placeholder/400/250"
+  },
+  {
+    id: 6,
+    title: "Online Resume Builder",
+    description: "A full-stack CV and resume builder application with a Java backend and MySQL database. Enables users to create professional resumes with multiple sections, manage personal details, and generate formatted CVs.",
+    techStack: ["Java", "MySQL", "JavaScript", "HTML5", "CSS3"],
+    category: "web",
+    githubLink: "https://github.com/Chowdary225/online-resume-builder",
+    liveLink: "#",
+    featured: false,
+    image: "/api/placeholder/400/250"
+  },
+  {
+    id: 7,
+    title: "Real-Time Chat Room",
+    description: "A real-time messaging application with user authentication and live chat functionality. Built with a React frontend and Node.js backend, enabling seamless one-on-one and group communication.",
+    techStack: ["React", "Node.js", "JavaScript", "HTML5", "CSS3"],
+    category: "web",
+    githubLink: "https://github.com/Chowdary225/-A-real-time-chat-room",
+    liveLink: "#",
+    featured: false,
+    image: "/api/placeholder/400/250"
+  },
+  {
+    id: 8,
+    title: "INT252 E-Store",
+    description: "A React-based e-commerce platform with product browsing, shopping cart, checkout flow, and user authentication. Features private routing, reusable components, and a complete online shopping experience.",
+    techStack: ["React", "JavaScript", "CSS3"],
+    category: "web",
+    githubLink: "https://github.com/Chowdary225/INT252Estore",
+    liveLink: "#",
+    featured: false,
+    image: "/api/placeholder/400/250"
+  },
+  {
+    id: 9,
+    title: "Movie Entertainment Hub",
+    description: "A React application for browsing and searching movies and entertainment content. Features a responsive layout, dynamic content pages, and an intuitive interface for discovering media.",
+    techStack: ["React", "JavaScript", "CSS3", "HTML5"],
+    category: "web",
+    githubLink: "https://github.com/Chowdary225/react-project-movie",
+    liveLink: "#",
+    featured: false,
+    image: "/api/placeholder/400/250"
   }
-  
-  // 🚀 READY TO ADD MORE PROJECTS?
-  // Your portfolio currently displays 2 authentic GitHub projects.
-  // To add more of your actual GitHub repositories:
-  
-  // STEP 1: Visit your GitHub profile: https://github.com/Chowdary225
-  // STEP 2: Choose repositories you want to showcase
-  // STEP 3: For each repository, add it using this template:
-  
-  /*
-  ,{
-    id: 3, // increment the id number
-    title: "Your Actual Project Name",
-    description: "Real description of what your project does, the problem it solves, and key features. Write 2-3 sentences about the project's purpose and functionality.",
-    techStack: ["HTML5", "CSS3", "JavaScript"], // List actual technologies used
-    category: "Web Development", // or "Mobile App", "Desktop App", etc.
-    githubLink: "https://github.com/Chowdary225/your-actual-repo-name",
-    liveLink: "https://your-live-demo.com", // or "#" if no live demo
-    demoVideo: "https://www.youtube.com/watch?v=VIDEO_ID", // YouTube/Vimeo link or "/videos/demo.mp4" for local
-    featured: false, // set to true for featured projects (max 2-3 featured)
-    image: "/images/project-screenshot.jpg" // add actual screenshot to /public/images/
-  }
-  */
-  
-  // 📋 COMMON PROJECT TYPES TO LOOK FOR IN YOUR GITHUB:
-  // ✅ Calculator Applications
-  // ✅ To-Do List / Task Managers
-  // ✅ Weather Apps with API integration
-  // ✅ E-commerce / Shopping websites
-  // ✅ Blog / CMS websites
-  // ✅ Restaurant / Business landing pages
-  // ✅ Quiz / Game applications
-  // ✅ Music / Media players
-  // ✅ Chat / Social applications
-  // ✅ Portfolio / Personal websites
-  // ✅ Form validation projects
-  // ✅ API integration projects
-  
-  // 🎯 QUALITY TIPS:
-  // - Focus on projects that demonstrate your skills
-  // - Include projects with different tech stacks
-  // - Add live demo links if available
-  // - Take screenshots and add them to /public/images/
-  // - Write compelling descriptions that highlight features
-  // - Keep descriptions professional and concise
-  
-  // 🔥 NEXT STEPS:
-  // 1. Browse: https://github.com/Chowdary225?tab=repositories
-  // 2. Select 3-5 best projects to showcase
-  // 3. Copy the template above for each project
-  // 4. Replace placeholder text with real project details
-  // 5. Save this file to see your updates!
 ];
 
 export const certificates = [];
