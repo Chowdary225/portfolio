@@ -7,10 +7,16 @@ const Projects = () => {
 
   const projects = projectsData;
 
+  const categoryLabels = {
+    web: 'Web Development',
+    design: 'UI/UX Design'
+  };
+
   const categories = [
     { key: 'all', label: 'All Projects' },
-    { key: 'web', label: 'Web Development' },
-    { key: 'design', label: 'UI/UX Design' }
+    ...[...new Set(projects.map((project) => project.category))]
+      .filter(Boolean)
+      .map((key) => ({ key, label: categoryLabels[key] || key }))
   ];
 
   const filteredProjects = filter === 'all' 
@@ -153,7 +159,7 @@ const Projects = () => {
               Let's Connect
             </a>
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/Chowdary225" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-outline"
