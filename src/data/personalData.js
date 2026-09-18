@@ -93,7 +93,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/bookkaro",
     liveLink: "#", // Add live demo link if deployed
-    featured: true
+    featured: true,
+    image: "/images/project-demo-booking.png"
   },
   
   {
@@ -104,7 +105,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/-A-real-time-chat-room",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-chat.png"
   },
   {
     id: 4,
@@ -114,7 +116,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/react-project-movie",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-movie.png"
   },
   {
     id: 5,
@@ -124,7 +127,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/E-commerce-",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-shopping.png"
   },
   {
     id: 6,
@@ -134,7 +138,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/Web-Project-Game",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-game.png"
   },
   {
     id: 7,
@@ -144,7 +149,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/new",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-background.png"
   },
   {
     id: 8,
@@ -154,7 +160,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/nankris/FLYBLOO",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-shopping.png"
   },
   {
     id: 9,
@@ -164,7 +171,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/LUXE-Shopping",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-shopping.png"
   },
   {
     id: 10,
@@ -174,7 +182,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/project1",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-background.png"
   },
   {
     id: 11,
@@ -184,7 +193,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/nankris/substack_extension_stats",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-background.png"
   },
   {
     id: 12,
@@ -194,7 +204,8 @@ export const projects = [
     category: "Machine Learning",
     githubLink: "https://github.com/nankris/ML_DL_Projects",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-ml.png"
   },
   {
     id: 13,
@@ -204,7 +215,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/nankris/robotics_site",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-ml.png"
   },
   {
     id: 14,
@@ -214,7 +226,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/sleep-mode",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-wellness.png"
   },
   {
     id: 15,
@@ -224,7 +237,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/slumber-vista-app",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-wellness.png"
   },
   {
     id: 16,
@@ -234,7 +248,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/INT219",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-background.png"
   },
   {
     id: 17,
@@ -244,7 +259,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/dynamic-shop-realm",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-shopping.png"
   },
   {
     id: 18,
@@ -254,7 +270,8 @@ export const projects = [
     category: "Java Development",
     githubLink: "https://github.com/Chowdary225/online-resume-builder",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-resume.png"
   },
   {
     id: 19,
@@ -264,7 +281,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/INT252Estore",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-shopping.png"
   },
   {
     id: 20,
@@ -274,7 +292,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/Estore",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-shopping.png"
   },
   {
     id: 21,
@@ -284,7 +303,8 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/React",
     liveLink: "#",
-    featured: false
+    featured: false,
+    image: "/images/project-demo-background.png"
   },
 
   // 🚀 READY TO ADD MORE PROJECTS?

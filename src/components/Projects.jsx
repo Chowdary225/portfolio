@@ -60,6 +60,9 @@ const Projects = () => {
                       <span className="project-demo-label">Demo preview</span>
                     </div>
                   )}
+                  {project.image && (
+                    <span className="project-image-title">{project.title}</span>
+                  )}
                   <div className="project-overlay">
                     <div className="project-links">
                       <a 
@@ -135,6 +138,9 @@ const Projects = () => {
                       <span className="project-demo-title">{project.title}</span>
                       <span className="project-demo-label">Demo preview</span>
                     </div>
+                  )}
+                  {project.image && (
+                    <span className="project-image-title">{project.title}</span>
                   )}
                   <div className="project-overlay">
                     <div className="project-links">
