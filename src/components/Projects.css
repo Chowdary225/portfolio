@@ -103,6 +103,13 @@
   background: var(--bg-secondary);
 }
 
+.project-image-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .project-placeholder {
   width: 100%;
   height: 100%;
@@ -112,6 +119,46 @@
   justify-content: center;
   background: linear-gradient(135deg, var(--bg-accent), var(--bg-secondary));
   color: var(--text-secondary);
+}
+
+.project-demo {
+  position: relative;
+  isolation: isolate;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-demo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(15, 23, 42, 0.58);
+}
+
+.project-demo img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-demo-title {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.project-demo-label {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
 }
 
 .project-placeholder span {

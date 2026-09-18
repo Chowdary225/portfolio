@@ -4,13 +4,24 @@ import './Projects.css';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
+  const basePath = import.meta.env.BASE_URL;
+  const demoImagePath = `${basePath}images/project-demo-background.png`;
 
   const projects = projectsData;
 
+  const getProjectImagePath = (imagePath) => {
+    if (!imagePath) return null;
+    return imagePath.startsWith('/')
+      ? `${basePath}${imagePath.slice(1)}`
+      : imagePath;
+  };
+
   const categories = [
     { key: 'all', label: 'All Projects' },
-    { key: 'web', label: 'Web Development' },
-    { key: 'design', label: 'UI/UX Design' }
+    ...[...new Set(projects.map(project => project.category))].map(category => ({
+      key: category,
+      label: category
+    }))
   ];
 
   const filteredProjects = filter === 'all' 
@@ -36,10 +47,19 @@ const Projects = () => {
             {featuredProjects.map((project) => (
               <div key={project.id} className="featured-project-card slide-in-left">
                 <div className="project-image">
-                  <div className="project-placeholder">
-                    <span>📱</span>
-                    <p>Project Screenshot</p>
-                  </div>
+                  {project.image ? (
+                    <img
+                      src={getProjectImagePath(project.image)}
+                      alt={`${project.title} preview`}
+                      className="project-image-media"
+                    />
+                  ) : (
+                    <div className="project-placeholder project-demo">
+                      <img src={demoImagePath} alt="" aria-hidden="true" />
+                      <span className="project-demo-title">{project.title}</span>
+                      <span className="project-demo-label">Demo preview</span>
+                    </div>
+                  )}
                   <div className="project-overlay">
                     <div className="project-links">
                       <a 
@@ -103,10 +123,19 @@ const Projects = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="project-image">
-                  <div className="project-placeholder">
-                    <span>🖥️</span>
-                    <p>Project Screenshot</p>
-                  </div>
+                  {project.image ? (
+                    <img
+                      src={getProjectImagePath(project.image)}
+                      alt={`${project.title} preview`}
+                      className="project-image-media"
+                    />
+                  ) : (
+                    <div className="project-placeholder project-demo">
+                      <img src={demoImagePath} alt="" aria-hidden="true" />
+                      <span className="project-demo-title">{project.title}</span>
+                      <span className="project-demo-label">Demo preview</span>
+                    </div>
+                  )}
                   <div className="project-overlay">
                     <div className="project-links">
                       <a 
@@ -153,7 +182,7 @@ const Projects = () => {
               Let's Connect
             </a>
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/Chowdary225"
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-outline"

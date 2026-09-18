@@ -93,12 +93,202 @@ export const projects = [
     category: "Web Development",
     githubLink: "https://github.com/Chowdary225/bookkaro",
     liveLink: "#", // Add live demo link if deployed
-    featured: true,
-    image: "/api/placeholder/400/250"
-  }
+    featured: true
+  },
   
+  {
+    id: 3,
+    title: "Real-Time Chat Room",
+    description: "A browser-based chat room project focused on real-time communication and interactive user experiences.",
+    techStack: ["JavaScript", "HTML5", "CSS3"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/-A-real-time-chat-room",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "React Movie App",
+    description: "A React-based movie application that demonstrates component-driven UI development and responsive styling.",
+    techStack: ["React", "JavaScript", "CSS3"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/react-project-movie",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 5,
+    title: "E-Commerce Website",
+    description: "An e-commerce interface project with product-focused pages and a responsive web layout.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/E-commerce-",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Web Project Game",
+    description: "A multi-level browser game built with HTML, CSS, and JavaScript, including separate level pages and game assets.",
+    techStack: ["JavaScript", "HTML5", "CSS3"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/Web-Project-Game",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 7,
+    title: "New Project",
+    description: "A GitHub project demonstrating practical application development and experimentation.",
+    techStack: ["JavaScript", "HTML5", "CSS3"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/new",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 8,
+    title: "FLYBLOO",
+    description: "A web project developed in collaboration with the nankris organization.",
+    techStack: ["Web Development"],
+    category: "Web Development",
+    githubLink: "https://github.com/nankris/FLYBLOO",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 9,
+    title: "LUXE Shopping",
+    description: "A luxury shopping experience project focused on product presentation and responsive web design.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/LUXE-Shopping",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 10,
+    title: "Project 1",
+    description: "A web development project built as part of the GitHub project collection.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/project1",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 11,
+    title: "Substack Extension Stats",
+    description: "A JavaScript project for working with Substack extension statistics and related data.",
+    techStack: ["JavaScript"],
+    category: "Web Development",
+    githubLink: "https://github.com/nankris/substack_extension_stats",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 12,
+    title: "ML & DL Projects",
+    description: "A collection of machine learning and deep learning projects and experiments.",
+    techStack: ["Machine Learning", "Deep Learning"],
+    category: "Machine Learning",
+    githubLink: "https://github.com/nankris/ML_DL_Projects",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 13,
+    title: "Robotics Site",
+    description: "A TypeScript-based website project related to robotics and technology.",
+    techStack: ["TypeScript"],
+    category: "Web Development",
+    githubLink: "https://github.com/nankris/robotics_site",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 14,
+    title: "Sleep Mode",
+    description: "An application project focused on sleep mode and wellness-related functionality.",
+    techStack: ["JavaScript", "HTML5", "CSS3"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/sleep-mode",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 15,
+    title: "Slumber Vista App",
+    description: "A sleep and wellness application project with a user-focused interface.",
+    techStack: ["JavaScript", "HTML5", "CSS3"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/slumber-vista-app",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 16,
+    title: "INT219 Web Project",
+    description: "A web development project created for the INT219 course.",
+    techStack: ["HTML5", "JavaScript"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/INT219",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 17,
+    title: "Dynamic Shop Realm",
+    description: "A dynamic shopping project focused on building an interactive e-commerce experience.",
+    techStack: ["JavaScript", "HTML5", "CSS3"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/dynamic-shop-realm",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 18,
+    title: "Online Resume Builder",
+    description: "A Java-based application for creating and managing professional resumes.",
+    techStack: ["Java"],
+    category: "Java Development",
+    githubLink: "https://github.com/Chowdary225/online-resume-builder",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 19,
+    title: "INT252 E-Store",
+    description: "An e-store project developed with JavaScript as part of the INT252 coursework.",
+    techStack: ["JavaScript", "HTML5", "CSS3"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/INT252Estore",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 20,
+    title: "Estore",
+    description: "An online store project included in the GitHub project collection.",
+    techStack: ["HTML5", "CSS3", "JavaScript"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/Estore",
+    liveLink: "#",
+    featured: false
+  },
+  {
+    id: 21,
+    title: "React Projects",
+    description: "A collection of React practice work and frontend experiments.",
+    techStack: ["React", "JavaScript"],
+    category: "Web Development",
+    githubLink: "https://github.com/Chowdary225/React",
+    liveLink: "#",
+    featured: false
+  },
+
   // 🚀 READY TO ADD MORE PROJECTS?
-  // Your portfolio currently displays 2 authentic GitHub projects.
+  // Your portfolio displays selected projects from your GitHub profile.
   // To add more of your actual GitHub repositories:
   
   // STEP 1: Visit your GitHub profile: https://github.com/Chowdary225
